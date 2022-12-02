@@ -1,0 +1,16 @@
+class Dog < ApplicationRecord
+  has_many :favorites
+  has_many :posts
+
+  validates :name, presence: true
+  validates :image_url, presence: true
+
+  #enum color
+  enum size: { big: 0, medium: 1, small: 2 }
+  enum vehicle: { car: 0, train: 1 }
+  enum cleaning: { like: 0, dislike: 1 }
+  enum active: { like: 0, dislike: 1 }
+  enum exercise: { like: 0, dislike: 1 }
+  enum home: { kids: 0, none: 1 }
+  enum house: { owned: 0, lent: 1 }
+end
