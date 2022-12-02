@@ -1,5 +1,5 @@
 class UserStepsController < ApplicationController
-  before_action :set_user_step, only: %i[ show edit update destroy ]
+  # before_action :set_user_step, only: %i[ show edit update destroy ]
 
   def first
     @user_choice = UserChoice.new
@@ -31,15 +31,15 @@ class UserStepsController < ApplicationController
   end
 
   def create
-    @user_choice = User.new(
-      vehicle: session[:vehicle],
+    @user_choice = UserChoice.new(
+      @vehicle: session[:vehicle],
       cleaning: session[:cleaning],
       active: session[:active],
       exercise: session[:exercise],
       home: session[:last_name_kana], 
-      house: session[:house]
+      @house: session[:house]
     )
-    if user_choice.save
+    if @user_choice.save
       session[:id] = @user.id
       redirect_to search_results_dogs_path
     else
@@ -50,9 +50,9 @@ class UserStepsController < ApplicationController
 
   private
 
-  def set_user_step
-    @user_step = UserStep.find(params[:id])
-  end
+  # def set_user_step
+  #   @user_step = UserStep.find(params[:id])
+  # end
 
   def user_choice_params
     params.require(:user_choice).permit(

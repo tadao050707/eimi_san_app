@@ -11,7 +11,7 @@ class UserChoicesController < ApplicationController
 
   end
 
-  def edie
+  def edit
     
   end
 end
