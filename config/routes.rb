@@ -15,5 +15,15 @@ Rails.application.routes.draw do
 
   resources :user_choices
 
-  resources :user_steps
+  resources :user_steps do
+    collection do
+      get 'first'
+      get 'second'
+      get 'third'
+      get 'fourth'
+      get 'fifth'
+      get 'sixth'
+      get 'search_results'
+    end
+  end
 end
