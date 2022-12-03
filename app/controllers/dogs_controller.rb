@@ -1,4 +1,6 @@
 class DogsController < ApplicationController
+  before_action :set_q, only: [:search, :search_results]
+
   def index
     @dogs = Dog.all
   end
@@ -17,14 +19,17 @@ class DogsController < ApplicationController
   end
 
   def search
-
   end
-
+  
   def search_results
-
+    @results = @q.result
   end
 
   private
+
+  def set_q
+    @q = Dog.ransack(params[:q])
+  end
 
   def dog_params
     params.require(:dog).permit(:name, :size, :vehicle, :cleaning, :active, :exercise, :home, :house, :image_url)
