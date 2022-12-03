@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_02_061710) do
+ActiveRecord::Schema.define(version: 2022_12_03_045301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2022_12_02_061710) do
   create_table "dogs", force: :cascade do |t|
     t.string "name", null: false
     t.integer "size", null: false
-    t.integer "color", null: false
     t.integer "vehicle", null: false
     t.integer "cleaning", null: false
     t.integer "active", null: false
