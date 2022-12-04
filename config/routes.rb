@@ -26,4 +26,6 @@ Rails.application.routes.draw do
       get 'search_results'
     end
   end
+
+  resources :users, only: [:show]
 end

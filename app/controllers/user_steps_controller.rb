@@ -32,12 +32,12 @@ class UserStepsController < ApplicationController
 
   def create
     @user_choice = UserChoice.new(
-      @vehicle: session[:vehicle],
+      vehicle: session[:vehicle],
       cleaning: session[:cleaning],
       active: session[:active],
       exercise: session[:exercise],
       home: session[:last_name_kana], 
-      @house: session[:house]
+      house: session[:house]
     )
     if @user_choice.save
       session[:id] = @user.id
