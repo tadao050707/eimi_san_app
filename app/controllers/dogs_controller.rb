@@ -16,6 +16,8 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find(params[:id])
+    # puts current_user.favorites
+    @user_favorite = current_user.favorites.select { |favorite| favorite.dog_id == @dog.id }[0]
   end
 
   def search
@@ -23,6 +25,14 @@ class DogsController < ApplicationController
   
   def search_results
     @results = @q.result.page(params[:page])
+  end
+
+  def matching_results
+    @dogs = Dog.all
+    @user_choices = UserChoice.where(user_id: current_user.id)
+    user_choice = [ @user_choices.vehicle, @user_choices.cleaning, @user_choices.active, @user_choices.exercise, @user_choices.home, @user_choices.house ]
+    puts user_choice
+    @matching_rate = @dogs.pluck(:vehicle, :cleaning, :active, :exercise, :home, :house).map {|breed| (breed & user_choice).length*100/2}
   end
 
   private

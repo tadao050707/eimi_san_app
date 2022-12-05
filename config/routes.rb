@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
       get 'search_results'
+      get 'matching_results'
     end
   end
 
@@ -23,9 +24,11 @@ Rails.application.routes.draw do
       get 'fourth'
       get 'fifth'
       get 'sixth'
-      get 'search_results'
+      get 'matching_results'
     end
   end
 
   resources :users, only: [:show]
+
+  resources :favorites, only: [:create, :destroy]
 end
