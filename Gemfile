@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'ransack'
 gem 'kaminari'
+gem 'rails_admin'
+gem 'cancancan'
