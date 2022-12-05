@@ -2,9 +2,10 @@
   <p>アクティブな休日が？</p>
   
   <div class="field">
-    <%= form.label :active %>
-    <%= form.radio_button :active, :like %>
-    <%= form.radio_button :active, :dislike %>
+    <%= form.radio_button :active, :like, class: "radio-inline__input" %>
+    <%= form.label(:active, "like", value: "like", class: "radio-inline__label") %>
+    <%= form.radio_button :active, :dislike, class: "radio-inline__input" %>
+    <%= form.label(:active, "dislike", value: "dislike", class: "radio-inline__label") %>
   </div>
   
   <div class="actions">

@@ -3,7 +3,8 @@ class FavoritesController < ApplicationController
     @favorite = current_user.favorites.create(dog_id: params[:dog_id])
   end
 
-  def delete
-    @favorite = current_user.favorites.create(dog_id: params[:dog_id]).destroy
+  def destroy
+    @favorite = current_user.favorites.create(dog_id: params[:dog_id]).delete
   end
 end
+

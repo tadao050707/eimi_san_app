@@ -2,9 +2,10 @@
   <p>こまめなお掃除が？</p>
   
   <div class="field">
-    <%= form.label :cleaning %>
-    <%= form.radio_button :cleaning, :like %>
-    <%= form.radio_button :cleaning, :dislike %>
+    <%= form.radio_button :cleaning, :like, class: "radio-inline__input"%>
+    <%= form.label(:cleaning, "like", value: "like", class: "radio-inline__label") %>
+    <%= form.radio_button :cleaning, :dislike, class: "radio-inline__input" %>
+    <%= form.label(:cleaning, "dislike", value: "dislike", class: "radio-inline__label") %>
   </div>
   
   <div class="actions">

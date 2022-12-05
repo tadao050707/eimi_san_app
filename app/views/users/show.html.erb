@@ -1,12 +1,17 @@
 <h1>My page<h1>
 
 <p>
+<%= 'name:' %>
 <%= @user.name%>
+</p>
+<p>
+<%= 'email:' %>
+<%= @user.email%>
 </p>
 <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
 <%= link_to 'Index', dogs_path %>
 <%= link_to 'Matching', first_user_steps_path %>
 <%= link_to 'Edit', edit_user_registration_path(current_user)%>
 <% if current_user.admin? %>
-    <%= link_to '管理者ログイン', rails_admin_path %>
-  <% end %>
+  <%= link_to '管理者ログイン', rails_admin_path %>
+<% end %>
