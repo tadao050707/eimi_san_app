@@ -31,17 +31,17 @@ class UserStepsController < ApplicationController
   end
 
   def create
-    @user_choice = UserChoice.new(
-      @vehicle: session[:vehicle],
+    @user_choices = UserChoice.new(
+      vehicle: session[:vehicle],
       cleaning: session[:cleaning],
       active: session[:active],
       exercise: session[:exercise],
       home: session[:last_name_kana], 
-      @house: session[:house]
+      house: session[:house]
     )
-    if @user_choice.save
+    if @user_choices.save
       session[:id] = @user.id
-      redirect_to search_results_dogs_path
+      redirect_to user_choices_path
     else
       render '/signup/registration'
     end
@@ -61,7 +61,8 @@ class UserStepsController < ApplicationController
       :active, 
       :exercise, 
       :home, 
-      :house
+      :house,
+      :user_id
     )
   end
 end

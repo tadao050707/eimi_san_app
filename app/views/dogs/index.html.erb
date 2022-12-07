@@ -25,3 +25,5 @@
 <%= link_to 'Search Dogs', search_dogs_path %>
 
 <%= paginate @dogs %>
+
+<%= link_to 'My page', user_path(current_user.id)  %>

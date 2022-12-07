@@ -1,0 +1,20 @@
+<h1>Answer</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>乗り物</th>
+      <th>掃除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_chices.each do |choice| %>
+      <tr>
+        <td><%= choice.vehicle %></td>
+        <td><%= choice.cleaning %></td>
+        <td><%= link_to 'Show', dog %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
