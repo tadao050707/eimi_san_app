@@ -1,0 +1,33 @@
+<%= link_to image_tag('logo.png'), "/" %>
+
+
+<h1>検索結果</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |dog| %>
+      <tr>
+        <td><%= dog.name %></td>
+        <td><%= image_tag dog.image_url, size: '600x500' %></td>
+        <td><%= link_to 'Show', dog %></td>
+        <% if current_user.admin? %>
+          <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
+          <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Search Dogs', search_dogs_path %>
+<%= link_to 'Index', dogs_path %>
+
+
+<%= paginate @results %>

@@ -1,0 +1,17 @@
+ <%= form_with model: @user_choice, url: third_user_steps_path, method: :get do |form| %>
+  <p>こまめなお掃除が？</p>
+  
+  <div class="field">
+    <%= form.radio_button :cleaning, :like, class: "radio-inline__input"%>
+    <%= form.label(:cleaning, "like", value: "like", class: "radio-inline__label") %>
+    <%= form.radio_button :cleaning, :dislike, class: "radio-inline__input" %>
+    <%= form.label(:cleaning, "dislike", value: "dislike", class: "radio-inline__label") %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <div>
+    <%= link_to 'Back', first_user_steps_path %>
+  </div>
+<% end %>

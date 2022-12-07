@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_02_061710) do
+ActiveRecord::Schema.define(version: 2022_12_05_064807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2022_12_02_061710) do
   create_table "dogs", force: :cascade do |t|
     t.string "name", null: false
     t.integer "size", null: false
-    t.integer "color", null: false
     t.integer "vehicle", null: false
     t.integer "cleaning", null: false
     t.integer "active", null: false
@@ -72,6 +71,7 @@ ActiveRecord::Schema.define(version: 2022_12_02_061710) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

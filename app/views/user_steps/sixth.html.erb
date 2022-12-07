@@ -1,0 +1,16 @@
+ <%= form_with model: @user_choice, url:  user_choices_path, method: :get do |form| %>
+  <p>ご自宅について</p>
+  <div class="field">
+    <%= form.radio_button :house, :owned, class: "radio-inline__input" %>
+    <%= form.label(:house, "owned", value: "owned", class: "radio-inline__label") %>
+    <%= form.radio_button :house, :lent, class: "radio-inline__input" %>
+    <%= form.label(:house, "lent", value: "lent", class: "radio-inline__label") %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <div>
+    <%= link_to 'Back', fifth_user_steps_path %>
+  </div>
+<% end %>
