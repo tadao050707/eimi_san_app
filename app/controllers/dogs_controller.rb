@@ -34,9 +34,11 @@ class DogsController < ApplicationController
     puts user_choice
     @matching_rate = @dogs.pluck(:vehicle, :cleaning, :active, :exercise, :home, :house).map {|breed| (breed & user_choice).length*100/2}
   end
-
+  
   private
+ 
 
+  
   def set_q
     @q = Dog.ransack(params[:q])
   end

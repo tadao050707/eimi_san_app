@@ -31,19 +31,19 @@ class UserStepsController < ApplicationController
   end
 
   def create
-    @user_choices = UserChoice.new(
+    @user_choice = current_user.build_user_choice(
       vehicle: session[:vehicle],
       cleaning: session[:cleaning],
       active: session[:active],
       exercise: session[:exercise],
-      home: session[:last_name_kana], 
-      house: session[:house]
+      home: session[:home], 
+      house: user_choice_params[:house]
     )
-    if @user_choices.save
-      session[:id] = @user.id
-      redirect_to user_choices_path
+    if @user_choice.save
+      session[:id] = @user_choice.user_id
+      redirect_to  matching_results_dogs_path
     else
-      render '/signup/registration'
+      render 'new'
     end
 
   end
@@ -55,14 +55,6 @@ class UserStepsController < ApplicationController
   # end
 
   def user_choice_params
-    params.require(:user_choice).permit(
-      :vehicle, 
-      :cleaning, 
-      :active, 
-      :exercise, 
-      :home, 
-      :house,
-      :user_id
-    )
+    params.require(:user_choice).permit(:vehicle, :cleaning, :active, :exercise, :home, :house, :user_id)
   end
 end

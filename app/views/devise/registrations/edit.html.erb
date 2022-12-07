@@ -18,6 +18,12 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :icon %><br/>
+    <%= image_tag @user.icon.url if @user.icon? %>
+    <%= f.file_field :icon %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.text_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>

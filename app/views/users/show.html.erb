@@ -8,10 +8,17 @@
 <%= 'email:' %>
 <%= @user.email%>
 </p>
-<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-<%= link_to 'Index', dogs_path %>
-<%= link_to 'Matching', first_user_steps_path %>
-<%= link_to 'Edit', edit_user_registration_path(current_user)%>
-<% if current_user.admin? %>
-  <%= link_to '管理者ログイン', rails_admin_path %>
+
+<% if @user.icon? %>
+  <%= image_tag @user.icon.url, class: 'user_icon' %>
+<% else %>
+  <%= image_tag ('ICON.png'), class: 'user_icon' %>
 <% end %>
+</p>
+
+
+<%= link_to image_tag('logout.png', width: 40), destroy_user_session_path, method: :delete %>
+<%= link_to 'Index', dogs_path %>
+<%= link_to 'Matching_Results', matching_results_dogs_path %>
+<%= link_to 'Edit', edit_user_registration_path(current_user)%>
+
