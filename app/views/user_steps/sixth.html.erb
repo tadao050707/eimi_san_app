@@ -1,0 +1,15 @@
+ <%= form_with model: @user_choice, url: search_results_dogs_path, method: :get do |form| %>
+  <p>ご自宅について</p>
+  <div class="field">
+    <%= form.label :house %>
+    <%= form.radio_button :house, :owned %>
+    <%= form.radio_button :house, :lent %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <div>
+    <%= link_to 'Back', fifth_user_steps_path %>
+  </div>
+<% end %>

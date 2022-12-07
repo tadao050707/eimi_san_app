@@ -1,0 +1,16 @@
+ <%= form_with model: @user_choice, url: third_user_steps_path, method: :get do |form| %>
+  <p>こまめなお掃除が？</p>
+  
+  <div class="field">
+    <%= form.label :cleaning %>
+    <%= form.radio_button :cleaning, :like %>
+    <%= form.radio_button :cleaning, :dislike %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <div>
+    <%= link_to 'Back', first_user_steps_path %>
+  </div>
+<% end %>
