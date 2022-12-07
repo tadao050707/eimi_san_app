@@ -13,3 +13,4 @@ CSV.foreach('db/sample_list.csv', headers: true) do |row|
     image_url: row[8]
   )
 end
+
