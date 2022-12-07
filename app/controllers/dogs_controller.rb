@@ -2,7 +2,7 @@ class DogsController < ApplicationController
   before_action :set_q, only: [:search, :search_results]
 
   def index
-    @dogs = Dog.all
+    @dogs = Dog.page(params[:page])
   end
 
   def new
@@ -22,7 +22,7 @@ class DogsController < ApplicationController
   end
   
   def search_results
-    @results = @q.result
+    @results = @q.result.page(params[:page])
   end
 
   private
