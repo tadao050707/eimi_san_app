@@ -1,3 +1,57 @@
-// Place all the styles related to the user_steps controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+p {
+  text-align: center;
+}
+
+div.field {
+  text-align: center;
+}
+
+div.actions {
+	display: flex;
+	justify-content: center;
+}
+
+.radio-inline__input {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.radio-inline__label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 18px;
+  border-radius: 3px;
+  transition: all .2s;
+}
+
+.radio-inline__input:checked + .radio-inline__label {
+  background: #de8d23d2;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+
+.radio-inline__input:focus + .radio-inline__label {
+  outline-color: #4D90FE;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.button02 a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 30px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #c0edd8ed;
+  border-radius: 50vh;
+}
+
+.button02 a:hover {
+  text-decoration: none;
+  background-color: #34695079;
+}

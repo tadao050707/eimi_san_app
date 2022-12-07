@@ -10,8 +10,11 @@
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "次へ" %>
   </div>
 
-  <%= link_to 'Back', user_path(current_user) %>
+  <div class="button02">
+    <%= link_to 'Back', user_path(current_user) %>
+  </div>
+  
 <% end %>
