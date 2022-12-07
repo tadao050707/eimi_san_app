@@ -9,11 +9,10 @@
   </thead>
 
   <tbody>
-    <% @user_chices.each do |choice| %>
+    <% @user_choices.each do |choice| %>
       <tr>
         <td><%= choice.vehicle %></td>
         <td><%= choice.cleaning %></td>
-        <td><%= link_to 'Show', dog %></td>
       </tr>
     <% end %>
   </tbody>

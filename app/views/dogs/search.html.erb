@@ -3,10 +3,10 @@
   <%= f.label :name_cont, '犬種名' %>
   <%= f.search_field :name_cont %>
   <%= f.label :size, '大きさ' %>
-  <%= f.select :size, Dog.sizes.keys.to_a, { include_blank: "指定なし" } %>
-  <%= f.check_box :cleaning_eq, {}, 1 %>
+  <%= f.select :size_eq, Dog.sizes.keys.to_a, { include_blank: "指定なし" } %>
+  <%= f.check_box :cleaning_eq, {}, 1 , nil%>
   <%= '抜け毛少ない' %>
-  <%= f.check_box :home_eq, {}, 1 %>
+  <%= f.check_box :home_eq, {}, 1 , nil%>
   <%= '穏やか' %>
   <br>
   <%= f.submit '検索'  %>
