@@ -5,15 +5,24 @@
     <tr>
       <th>乗り物</th>
       <th>掃除</th>
+      <th>休日</th>
+      <th>運動</th>
+      <th>ご家庭</th>
+      <th>ご自宅</th>
     </tr>
   </thead>
 
   <tbody>
     <% @user_choices.each do |choice| %>
       <tr>
-        <td><%= choice.vehicle %></td>
-        <td><%= choice.cleaning %></td>
+        <td><%= choice.vehicle_i18n %></td>
+        <td><%= choice.cleaning_i18n %></td>
+        <td><%= choice.active_i18n %></td>
+        <td><%= choice.exercise_i18n %></td>
+        <td><%= choice.home_i18n %></td>
+        <td><%= choice.house_i18n %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+

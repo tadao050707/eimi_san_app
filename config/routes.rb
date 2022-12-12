@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root 'homes#index'
+  root 'homes#top'
 
   resources :dogs do
     collection do
@@ -36,4 +36,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   resources :favorites, only: [:create, :destroy]
+
+  resources :posts
 end

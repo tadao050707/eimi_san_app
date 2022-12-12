@@ -1,0 +1,18 @@
+.pagination {
+  justify-content: center;
+}
+ 
+ .pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #0C244A;   /*文字の色を変える*/
+}
+
+.pagination>.active>a {     
+  background: #F0ADAD;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
+}
+

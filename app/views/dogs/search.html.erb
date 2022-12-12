@@ -1,15 +1,30 @@
 <h1>犬種検索</h1>
-<%= search_form_for @q, url: search_results_dogs_path do |f| %>
-  <%= f.label :name_cont, '犬種名' %>
-  <%= f.search_field :name_cont %>
-  <%= f.label :size, '大きさ' %>
-  <%= f.select :size_eq, Dog.sizes.keys.to_a, { include_blank: "指定なし" } %>
-  <%= f.check_box :cleaning_eq, {}, 1 , nil%>
-  <%= '抜け毛少ない' %>
-  <%= f.check_box :home_eq, {}, 1 , nil%>
-  <%= '穏やか' %>
-  <br>
-  <%= f.submit '検索'  %>
-<% end %>
+<div class="row justify-content-center">
+  <%= search_form_for @q, url: search_results_dogs_path do |f| %>
+    <div class="searching">
+      <%= f.label :name_cont, '犬種名' %>
+      <%= f.search_field :name_cont %>
+    </div>
+    <div class="searching">
+      <%= f.label :size, '大きさ' %>
+      <%= f.select :size_eq, Dog.sizes.keys.map { |k| [t("enum.dog.size.#{k}"), k] }, { include_blank: "指定なし" } %>
+    </div>
+    <div class="searching">
+      <%= f.check_box :cleaning_eq, {}, 1 , nil%>
+      <%= '抜け毛少ない' %>
+      <%= f.check_box :home_eq, {}, 0 , nil%>
+      <%= '穏やか' %>
+      <%= f.check_box :active_eq, {}, 0 , nil%>
+      <%= 'ドッグスポーツ' %>
+      <%= f.check_box :exercise_eq, {}, 1 , nil%>
+      <%= 'お散歩少なめ' %>
+      <%= f.check_box :house_eq, {}, 1 , nil%>
+      <%= '賃貸OK' %>
+    </div>
+    <div class="button text-center">
+      <%= f.submit '検索'  %>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to 'Index', dogs_path %>

@@ -1,24 +1,25 @@
-<h1>My page<h1>
+<div class="sub-container">
+  <div class="white-frame">
+    <h1>My page<h1>
+    <p class="center-text">
+    <%= 'name:' %>
+    <%= @user.name%>
+    </p>
+    <p class="center-text">
+    <%= 'email:' %>
+    <%= @user.email%>
+    </p>
 
-<p>
-<%= 'name:' %>
-<%= @user.name%>
-</p>
-<p>
-<%= 'email:' %>
-<%= @user.email%>
-</p>
+    <% if @user.icon? %>
+      <%= image_tag @user.icon.url, class: 'user_icon d-block mx-auto' %>
+    <% else %>
+      <%= image_tag ('ICON.png'), class: 'user_icon d-block mx-auto' %>
+    <% end %>
 
-<% if @user.icon? %>
-  <%= image_tag @user.icon.url, class: 'user_icon' %>
-<% else %>
-  <%= image_tag ('ICON.png'), class: 'user_icon' %>
-<% end %>
-</p>
-
-
-<%= link_to image_tag('logout.png', width: 40), destroy_user_session_path, method: :delete %>
-<%= link_to 'Index', dogs_path %>
-<%= link_to 'Matching_Results', matching_results_dogs_path %>
-<%= link_to 'Edit', edit_user_registration_path(current_user)%>
-
+    <%= link_to 'Index', dogs_path %>
+    <%= link_to 'Matching', first_user_steps_path %>
+    <%= link_to 'Matching_Results', matching_results_dogs_path %>
+    <%= link_to 'Edit', edit_user_registration_path(current_user)%>
+    <%= link_to 'Choices', user_choices_path %>
+  </div>
+</div>
