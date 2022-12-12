@@ -1,29 +1,27 @@
-<%= link_to image_tag('logo.png'), "/" %>
 <h1>Dogs</h1>
+<div class="center-text">
+  <table>
+    <tbody>
+      <div class="card-deck">
+        <% @dogs.each do |dog| %>
+          <div class="card" flex-direction:row>
+            <div class="card-header">
+              <%= dog.name %>
+            </div>
+            <div class="card-body">
+              <%= image_tag dog.image_url, size: '300x250'%>
+              <%= link_to 'Show', dog %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </tbody>
+  </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-    </tr>
-  </thead>
+  <br>
 
-  <tbody>
-    <% @dogs.each do |dog| %>
-      <tr>
-        <td><%= dog.name %></td>
-        <td><%= image_tag dog.image_url, size: '600x500'%></td>
-        <td><%= link_to 'Show', dog %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <%= link_to 'Search Dogs', search_dogs_path %>
 
-<br>
+  <%= paginate @dogs %>
 
-<%= link_to 'Search Dogs', search_dogs_path %>
-
-<%= paginate @dogs %>
-
-<%= link_to 'My page', user_path(current_user.id)  %>
+  <%= link_to 'My page', user_path(current_user.id)  %>

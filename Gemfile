@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capistrano', '3.16.0' # capistranoのツール一式
+  gem 'capistrano', '3.16.0'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
@@ -68,5 +68,10 @@ gem 'rails_admin'
 gem 'cancancan'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rails-i18n'
+gem 'devise-i18n'
+gem 'enum_help'
 gem 'fog-aws'
 gem 'dotenv-rails'
+gem 'unicorn'
+

@@ -1,0 +1,75 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #0C244A;
+  background-color: #F0CBC1;
+  background-size: cover;
+}
+
+.center-text {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+p {
+  position: absolute;
+  z-index: 100;
+}
+
+.heart{
+	width: 120px;
+	height: 120px;
+	position: relative;
+  padding: 100px;
+  z-index: 0;
+}
+
+.heart::before{
+	content: "";
+	position: absolute;
+	left: 110px;
+  top: 215px;/* y位置 */
+	width: 60px; /* 幅 */
+	height: 100px; /* 高さ */
+	background: #fffaff; /* 色 */
+	border-radius: 100px 60px 0 0; /* 丸み */
+	transform: rotate(-45deg); /* 角度調整 */
+	transform-origin: 0 100%; /* 回転の基準点 */
+}
+
+.heart::after {
+	content: "";
+	position: absolute;
+  left: 51px;
+  top: 215px;
+	width: 60px; /* 幅 */
+	height: 100px; /* 高さ */
+	background: #fffaff; /* 色 */
+	border-radius: 60px 100px 0 0; /* 丸み */
+	transform: rotate(45deg); /* 角度調整 */
+	transform-origin: 100% 100%; /* 回転の基準点 */
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #80C0A0;
+  border-color: #80C0A0;
+  }
+
+  .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #F0CBC1;
+  }
+
+  .page-link {
+    background-color: #F0CBC1;
+  }
+
+  div.searching {
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,33 @@
+@import '~bootstrap/scss/bootstrap';
+@import "layout/navbar";
+
+.button004 {
+  background: #fff;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 260px;
+  padding: 10px 25px;
+  color:#0C244A;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  margin: 20px;
+}
+.button004 :after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.2s ease-in-out;
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-50%);
+}
+.button004 :hover {
+  background:#34695079;
+  color: #FFF;
+}

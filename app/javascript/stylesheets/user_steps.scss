@@ -1,9 +1,19 @@
-p {
-  text-align: center;
+body {
+  color: #0C244A;
+  background-color:#F0C0C0;
+  background-size: cover;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-div.field {
+p.enum-choice {
   text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+div.enum-choice {
+  text-align: center;
+  margin: 20px;
 }
 
 div.actions {
@@ -18,40 +28,34 @@ div.actions {
 
 .radio-inline__label {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   margin-right: 18px;
-  border-radius: 3px;
+  margin-left: 18px;
+  border-radius: 10px;
   transition: all .2s;
 }
 
 .radio-inline__input:checked + .radio-inline__label {
-  background: #de8d23d2;
+  background: #80C0A0;
   color: #fff;
   text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
 
 .radio-inline__input:focus + .radio-inline__label {
-  outline-color: #4D90FE;
+  outline-color:  #80C0A0;
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
 }
 
-.button02 a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 1em 2em;
-  width: 30px;
-  color: #333;
+div.button02 {
+  text-align: center;
+  width: 50px;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
-  background-color: #c0edd8ed;
-  border-radius: 50vh;
 }
 
-.button02 a:hover {
-  text-decoration: none;
-  background-color: #34695079;
+.left{
+  float: left;
 }
