@@ -117,6 +117,7 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-i18n (1.10.2)
+      devise (>= 4.8.0)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -341,12 +342,11 @@ DEPENDENCIES
   capybara (>= 3.26)
   carrierwave
   devise
-  dotenv-rails
-  ed25519
-  fog-aws
   devise-i18n
   dotenv-rails
+  ed25519
   enum_help
+  fog-aws
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.3)
