@@ -8,7 +8,7 @@ set :branch, ENV['BRANCH'] || 'master'
 
 set :deploy_to, "/var/www/Wonder"
 
-set :linked_files, %w{.evn config/database.yml}
+set :linked_files, %w{.env config/database.yml}
 
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 
