@@ -25,6 +25,9 @@ class DogsController < ApplicationController
   
   def search_results
     @results = @q.result.page(params[:page])
+    # if params[:q] = "" &&  params[:q][:cleaning_eq] = "" && params[:q][:size_eq] = "" && params[:q][:home_eq] = ""
+    #   redirect_to search_dogs_path
+    # end
   end
   
   private

@@ -6,3 +6,51 @@ ja:
       previous: <i class="fas fa-angle-left"></i>
       next: <i class="fas fa-angle-right"></i>
       truncate: "..."
+  enums: 
+    dog:
+      size:
+        big: '大型犬'
+        medium: '中型犬'
+        small: '小型犬'
+      vehicle:
+        car: '車'
+        train: '電車'
+      cleaning:
+        like: 'こまめにするのが好き'
+        dislike: 'あまり好きではない'
+      active:
+        like: 'アクティブに過ごす'
+        dislike: '家で過ごす方が多い'
+      exercise:
+        like: '１時間以上散歩できる'
+        dislike: 'あまり好きではない'
+      home:
+        kids: '小さいお子さんがいる、家族が増える予定だ'
+        none: '小さいお子さんはいない'
+      house:
+        owned: '持ち家'
+        lent: '賃貸'
+  enums: 
+    user_choice:
+      size:
+        big: '大型犬'
+        medium: '中型犬'
+        small: '小型犬'
+      vehicle:
+        car: '車'
+        train: '電車'
+      cleaning:
+        like: 'こまめにするのが好き'
+        dislike: 'あまり好きではない'
+      active:
+        like: 'アクティブに過ごす'
+        dislike: '家で過ごす方が多い'
+      exercise:
+        like: '１時間以上散歩できる'
+        dislike: 'あまり好きではない'
+      home:
+        kids: '小さいお子さんがいる、家族が増える予定だ'
+        none: '小さいお子さんはいない'
+      house:
+        owned: '持ち家'
+        lent: '賃貸'

@@ -1,6 +1,7 @@
  <%= form_with model: @user_choice, url: user_steps_path, method: :post do |form| %>
-  <p>ご自宅について</p>
-  <div class="field">
+  <p class="enum-choice">ご自宅について</p>
+
+  <div class="enum-choice">
     <%= form.radio_button :house, :owned, class: "radio-inline__input" %>
     <%= form.label(:house, "owned", value: "owned", class: "radio-inline__label") %>
     <%= form.radio_button :house, :lent, class: "radio-inline__input" %>
@@ -8,7 +9,7 @@
   </div>
   
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "button004"%>
   </div>
   <div>
     <%= link_to 'Back', fifth_user_steps_path %>

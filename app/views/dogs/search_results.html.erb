@@ -6,12 +6,12 @@
           <h4><%= dog.name %></h4>
         </div>
         <div class="card-body">
-          <%= image_tag dog.image_url, size: '600x500' %>
+          <%= image_tag dog.image_url, size: '300x250' %>
           <h3><%= link_to 'Show', dog %></h3>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 
 
 <%= link_to 'Search Dogs', search_dogs_path %>

@@ -6,29 +6,34 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <%= link_to image_tag('logo.png'), "/" %>
-            <%= link_to image_tag('search.png', width: 30), search_dogs_path %>
+        <%= link_to image_tag('logo.png', width: 200), "/" %>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-md-auto align-items-center">
+            <li>
+              <%= link_to image_tag('search.png', width: 30), search_dogs_path %>
+             </li>
             <li>
               <%= link_to image_tag('login.png', width: 30), new_user_session_path %>
             </li>
             <li>
-              <%= link_to image_tag('logout.png', width: 40), destroy_user_session_path, method: :delete %>
+              <%= link_to image_tag('logout.png', width: 40), destroy_user_session_path %>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   </body>
