@@ -1,5 +1,9 @@
 require "active_support/core_ext/integer/time"
 
+Devise.setup do |config|
+  config.secret_key = 'cd930567f8ecdbb34905f39fe60dfd45d0362855288b6e09c719cc394b2ea9693ce92ee25b3f516ab66e4da62a9db836f665b5ae49967d366da2c3f67707de1e'
+end
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
