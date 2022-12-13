@@ -1,13 +1,13 @@
 <div class="center-text">
-  <%= link_to 'Search Dogs', search_dogs_path %>
+  <%= link_to t('.Search Dogs'), search_dogs_path %>
 
-  <h1>相性診断結果</h1>
+  <h1><%=t('.Matching results')%></h1>
   <table>
     <thead>
       <tr>
-        <th>名前</th>
-        <th>相性</th>
-        <th>写真</th>
+        <th><%=t('.Name')%></th>
+        <th><%=t('.Matching')%></th>
+        <th><%=t('.Image')%></th>
       </tr>
     </thead>  <tbody>
       <% Dog.all.each do | dog | %>
@@ -15,9 +15,11 @@
           <td><%= dog.name %></td>
           <td class="heart"><p class="rate"><%= matching_result(dog)%>%</p></td>
           <td><%= image_tag dog.image_url, size: '600x500'%></td>
-          <td><%= link_to 'Show', dog %></td>
+          <td><%= link_to t('.Show'), dog %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+
+<%= paginate @dogs %>

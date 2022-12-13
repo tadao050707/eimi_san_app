@@ -1,0 +1,28 @@
+en:
+  users:
+    show:
+      Index: Doggos list
+      Matching: Matching
+      Matching_Results: Matching Results
+  homes:
+    top:
+      page: Home page
+      Index: Doggos list
+  registrations:
+    new:
+      password_confirmation: password confirmation
+  dogs:
+    show:
+      Index: Doggos list
+    search_results:
+      Search Dogs: Search Doggos
+      Show: more info
+      Index: Doggos list
+    matching_results:
+      Image: Picture
+      Show: more info
+    index:
+      Dogs: Doggos
+      Show: more info
+      Search Dogs: Search Doggos
+      page: My page

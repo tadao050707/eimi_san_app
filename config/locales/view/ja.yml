@@ -1,36 +1,83 @@
 ja:
   users:
     show:
-      My page: 'マイページ'
-      Index: 'ワンちゃんの一覧ページ'
-      Matching: '相性診断'
-      Matching_Results: '相性結果'
-      Edit: 'プロフィールの編集'
-      Choices: '選択したものを見る'
+      My page: マイページ
+      name: 名前
+      email: メールアドレス
+      Index: ワンちゃんの一覧ページ
+      Matching: マッチング
+      Matching_Results: マッチング結果
+      Edit: プロフィールの編集
+      Choices: 選択したものを見る
   user_steps:
     first:
-      What do you ride?: 'ふだんよく乗るのは？'
+      What do you ride?: ふだんよく乗るのは？
     second:
-      Do you like cleaning up?: 'こまめなお掃除が？'
+      Do you like cleaning up?: こまめなお掃除が？
     third:
-      Active day off: 'アクティブな休日が？'
+      Active day off: アクティブな休日が？
     fourth:
-      Exercise: '運動するのは？'
+      Exercise: 運動するのは？
     fifth:
-      About family: 'ご家庭について'
+      About family: ご家庭について
     sixth:
-      About house: 'ご自宅について'
+      About house: ご自宅について
   user_choices:
     index:
-      vehicle: '乗り物'
-      cleaning: '掃除'
-      active: '休日'
-      exercise: '運動'
-      home: 'ご家庭'
-      house: 'ご自宅'
+      Answer: 選択した回答
+      vehicle: 乗り物
+      cleaning: 掃除
+      active: 休日
+      exercise: 運動
+      home: ご家庭
+      house: ご自宅
   homes:
     top:
-      page: 'トップページ'
-      Sign In: '初めての方'
-      Index: 'ワンちゃんの一覧ページ'
-      Guest login: 'ゲストログイン（閲覧用）'
+      Top page: トップページ
+      Sign In: 初めての方
+      Index: ワンちゃんの一覧ページ
+      Guest login: ゲストログイン（閲覧用）
+      Japanese: 日本語
+      English: 英語
+  registrations:
+    new:
+      name: 氏名
+      email: メール
+      password: パスワード
+      password_confirmation: 確認用パスワード
+  dogs:
+    show:
+      Name: 犬種名
+      Size: 大きさ
+      Feature: 特徴
+      Active: 運動
+      Cleaning: 抜け毛
+      Click here for like: いいねする
+    search:
+      Let find doggos: わんちゃんを探す
+      Breed: 犬種名
+      Size: 大きさ
+      Low-shedding: 抜け毛が少ない
+      Gentle: 穏やか
+      Dog sport: ドッグスポーツ
+      Short walking: お散歩少なめ
+      Lent house: 賃貸OK
+      Search: 検索
+      Index: ワンちゃんの一覧ページ
+    search_results:
+      Search Dogs: わんちゃんを探してみる
+      Search results: 検索結果
+      Show: 詳しくみる
+      Search Dogs: もっとわんちゃんを探してみる
+      Index: ワンちゃんの一覧ページ
+    matching_results:
+      Matching results: マッチングの結果
+      Name: 犬種
+      Matching: マッチング度
+      Image: 写真
+      Show: 詳しくみる
+    index:
+      Dogs: わんちゃん一覧
+      Show: 詳しくみる
+      Search Dogs: 他のわんちゃんを探してみる
+      My page: マイページ

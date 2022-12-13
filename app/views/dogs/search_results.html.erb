@@ -1,4 +1,4 @@
-<h1>検索結果</h1>
+<h1><%=t('.Search results')%></h1>
   <div class="card-deck">
     <% @results.each do |dog| %>
       <div class="card" flex-direction:row>
@@ -7,14 +7,14 @@
         </div>
         <div class="card-body">
           <%= image_tag dog.image_url, size: '300x250' %>
-          <h3><%= link_to 'Show', dog %></h3>
+          <h3><%= link_to t('.Show'), dog %></h3>
         </div>
       </div>
     <% end %>
   </div>
 
 
-<%= link_to 'Search Dogs', search_dogs_path %>
-<%= link_to 'Index', dogs_path %>
+<%= link_to t('.Search Dogs'), search_dogs_path %>
+<%= link_to t('.Index'), dogs_path %>
 
 <%= paginate @results %>

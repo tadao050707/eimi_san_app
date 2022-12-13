@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  get 'languages/local'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'homes#top'
-
+  get '/locale', to: 'languages#locale', as: 'locale'
   resources :dogs do
     collection do
       get 'search'

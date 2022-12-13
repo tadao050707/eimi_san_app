@@ -1,4 +1,4 @@
-<h1>Dogs</h1>
+<h1><%=t('.Dogs')%></h1>
 <div class="center-text">
   <table>
     <tbody>
@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
               <%= image_tag dog.image_url, size: '300x250'%>
-              <%= link_to 'Show', dog %>
+              <%= link_to t('.Show'), dog %>
             </div>
           </div>
         <% end %>
@@ -20,8 +20,8 @@
 
   <br>
 
-  <%= link_to 'Search Dogs', search_dogs_path %>
+  <%= link_to t('.Search Dogs'), search_dogs_path %>
 
   <%= paginate @dogs %>
 
-  <%= link_to 'My page', user_path(current_user.id)  %>
+  <%= link_to t('.My page'), user_path(current_user.id)  %>
