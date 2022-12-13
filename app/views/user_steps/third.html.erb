@@ -1,5 +1,5 @@
  <%= form_with model: @user_choice, url: fourth_user_steps_path, method: :get do |form| %>
-  <p class="enum-choice">アクティブな休日が？</p>
+  <p class="enum-choice"><%= t('.Active day off')%></p>
   
   <div class="enum-choice">
     <%= form.radio_button :active, :like, class: "radio-inline__input" %>

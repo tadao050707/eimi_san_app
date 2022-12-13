@@ -1,0 +1,36 @@
+ja:
+  users:
+    show:
+      My page: 'マイページ'
+      Index: 'ワンちゃんの一覧ページ'
+      Matching: '相性診断'
+      Matching_Results: '相性結果'
+      Edit: 'プロフィールの編集'
+      Choices: '選択したものを見る'
+  user_steps:
+    first:
+      What do you ride?: 'ふだんよく乗るのは？'
+    second:
+      Do you like cleaning up?: 'こまめなお掃除が？'
+    third:
+      Active day off: 'アクティブな休日が？'
+    fourth:
+      Exercise: '運動するのは？'
+    fifth:
+      About family: 'ご家庭について'
+    sixth:
+      About house: 'ご自宅について'
+  user_choices:
+    index:
+      vehicle: '乗り物'
+      cleaning: '掃除'
+      active: '休日'
+      exercise: '運動'
+      home: 'ご家庭'
+      house: 'ご自宅'
+  homes:
+    top:
+      page: 'トップページ'
+      Sign In: '初めての方'
+      Index: 'ワンちゃんの一覧ページ'
+      Guest login: 'ゲストログイン（閲覧用）'

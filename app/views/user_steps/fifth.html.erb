@@ -1,5 +1,5 @@
 <%= form_with model: @user_choice, url: sixth_user_steps_path, method: :get do |form| %>
-  <P class="enum-choice">ご家庭について</p>
+  <P class="enum-choice"><%=t('.About family')%></p>
 
   <div class="enum-choice">
     <%= form.radio_button :home, :kids, class: "radio-inline__input" %>
