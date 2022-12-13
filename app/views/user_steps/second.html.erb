@@ -1,5 +1,5 @@
  <%= form_with model: @user_choice, url: third_user_steps_path, method: :get do |form| %>
-  <p class="enum-choice">こまめなお掃除が？</p>
+  <p class="enum-choice"><%= t('.Do you like cleaning up?') %></p>
   
   <div class="enum-choice">
     <%= form.radio_button :cleaning, :like, class: "radio-inline__input"%>
@@ -9,7 +9,7 @@
   </div>
   
   <div class="actions">
-    <%= form.submit class: "button004"%>
+    <%= form.submit "Next", class: "button004"%>
   </div>
   <div>
     <%= link_to 'Back', first_user_steps_path %>

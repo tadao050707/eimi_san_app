@@ -6,7 +6,7 @@ ja:
       previous: <i class="fas fa-angle-left"></i>
       next: <i class="fas fa-angle-right"></i>
       truncate: "..."
-  enums: 
+  enums:
     dog:
       size:
         big: '大型犬'
@@ -30,7 +30,7 @@ ja:
       house:
         owned: '持ち家'
         lent: '賃貸'
-  enums: 
+  enums:
     user_choice:
       size:
         big: '大型犬'

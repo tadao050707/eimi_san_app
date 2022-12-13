@@ -1,6 +1,6 @@
 <div class="sub-container">
   <div class="white-frame">
-    <h1>My page<h1>
+    <h1><%=t('.My page')%><h1>
     <p class="center-text">
     <%= 'name:' %>
     <%= @user.name%>
@@ -16,10 +16,10 @@
       <%= image_tag ('ICON.png'), class: 'user_icon d-block mx-auto' %>
     <% end %>
 
-    <%= link_to 'Index', dogs_path %>
-    <%= link_to 'Matching', first_user_steps_path %>
-    <%= link_to 'Matching_Results', matching_results_dogs_path %>
-    <%= link_to 'Edit', edit_user_registration_path(current_user)%>
-    <%= link_to 'Choices', user_choices_path %>
+    <%= link_to t('.Index'), dogs_path %>
+    <%= link_to t('.Matching'), first_user_steps_path %>
+    <%= link_to t('.Matching_Results'), matching_results_dogs_path %>
+    <%= link_to t('.Edit'), edit_user_registration_path(current_user)%>
+    <%= link_to t('.Choices'), user_choices_path %>
   </div>
 </div>

@@ -3,9 +3,16 @@
   <%= @dog.name %>
   <strong>Size:</strong>
   <%= @dog.size_i18n %>
+  <strong>Feature:</strong>
+  <%= @dog.home_i18n %>
+  <strong>Active:</strong>
+  <%= @dog.active_i18n %>
+  <strong>Cleaning:</strong>
+  <%= @dog.cleaning_i18n %>
   <br>
   <%= image_tag @dog.image_url, size: '600x500' %>
 </p>
+
 
 <% if @user_favorite.present? %>
   <%= link_to '💜', favorite_path(id: @user_favorite.dog_id), method: :delete %>
