@@ -11,4 +11,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
+
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.enabled = true
+# Prevent initializing the application before assets are precompiled (required for heroku)
+Rails.application.config.assets.initialize_on_precompile = false
+# Add Rails Admin assets (required)
+Rails.application.config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
