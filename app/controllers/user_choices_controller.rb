@@ -1,6 +1,6 @@
 class UserChoicesController < ApplicationController
   def index
-    @user_choices = UserChoice.all
+      @user_choices = UserChoice.where(user_id: current_user.id)
   end
 
   def new
@@ -12,7 +12,17 @@ class UserChoicesController < ApplicationController
   end
 
   def edit
-    
+
+    @user_choice = UserChoice.where(user_id: params[:id])
+  end
+
+  def update
+    @user_choice = UserChoice.find(params[:id])
+    if @user_choice.update(user_choice_params)
+      redirect_to user_choice_path, notice: "Edited！"
+    else
+      render :edit
+    end
   end
 
   def matching_results
