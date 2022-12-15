@@ -9,10 +9,15 @@ en:
       page: Home page
       Index: Doggos list
   registrations:
+    edit:
+      leave blank: leave blank if you don't want to change it
+      Cancel: Cancel my account
     new:
       password_confirmation: password confirmation
   dogs:
     show:
+      Index: Doggos list
+    search:
       Index: Doggos list
     search_results:
       Search Dogs: Search Doggos

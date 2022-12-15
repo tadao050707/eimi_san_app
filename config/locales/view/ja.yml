@@ -1,7 +1,7 @@
 ja:
   users:
     show:
-      My page: マイページ
+      Page: マイページ
       name: 名前
       email: メールアドレス
       Index: ワンちゃんの一覧ページ
@@ -40,12 +40,23 @@ ja:
       Admin guest login: 管理者ゲストログイン
       Japanese: 日本語
       English: 英語
+  session:
+    new:
+      Sign in: サインイン
+      Log in: ログイン
   registrations:
+    edit:
+      Edit: プロフィールの編集
+      leave blank: 変更しない場合は空欄に
+      Cancel: 退会する
+      Back: 戻る
     new:
       name: 氏名
       email: メール
       password: パスワード
       password_confirmation: 確認用パスワード
+      characters minimum: 文字以上
+      Log in: ログイン
   dogs:
     show:
       Name: 犬種名
