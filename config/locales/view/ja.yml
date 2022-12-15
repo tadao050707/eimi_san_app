@@ -37,6 +37,7 @@ ja:
       Sign In: 初めての方
       Index: ワンちゃんの一覧ページ
       Guest login: ゲストログイン（閲覧用）
+      Admin guest login: 管理者ゲストログイン
       Japanese: 日本語
       English: 英語
   session:
@@ -92,3 +93,5 @@ ja:
       Show: 詳しくみる
       Search Dogs: 他のわんちゃんを探してみる
       My page: マイページ
+  sessions
+  
