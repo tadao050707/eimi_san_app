@@ -40,11 +40,17 @@ ja:
       Japanese: 日本語
       English: 英語
   registrations:
+    edit:
+      Edit: プロフィールの編集
+      leave blank: 変更しない場合は空欄に
+      Cancel: 退会する
+      Back: 戻る
     new:
       name: 氏名
       email: メール
       password: パスワード
       password_confirmation: 確認用パスワード
+      characters minimum: 文字以上
   dogs:
     show:
       Name: 犬種名
