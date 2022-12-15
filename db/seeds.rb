@@ -39,7 +39,7 @@ users = [
     name: "saitou", 
     email: "saitou@sample.com", 
     password: "saitou"
-  )
+  )]
 
 
 UserChoice.create!([
