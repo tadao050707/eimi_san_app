@@ -27,18 +27,18 @@ class UserStepsController < ApplicationController
     if session[:active] || params[:user_choice][:active]
       session[:active] = user_choice_params[:active]
       @user_choice= UserChoice.new
-  else
-    redirect_to third_user_steps_path
-  end
+    else
+      redirect_to third_user_steps_path
+    end
   end
 
   def fifth
     if session[:exercise] || params[:user_choice][:active]
       session[:exercise] = user_choice_params[:exercise]
       @user_choice = UserChoice.new
-  else
-    redirect_to fourth_user_steps_path
-  end
+    else
+      redirect_to fourth_user_steps_path
+    end
   end
 
   def sixth
