@@ -18,12 +18,17 @@ p {
 }
 
 
-.heart{
+.heart {
 	width: 120px;
 	height: 120px;
 	position: relative;
   padding: 100px;
   z-index: 0;
+
+  .rate {
+    display: flex;
+    padding-top: 30px;
+  }
 }
 
 .heart::before{
@@ -37,6 +42,7 @@ p {
 	border-radius: 100px 60px 0 0; /* 丸み */
 	transform: rotate(-45deg); /* 角度調整 */
 	transform-origin: 0 100%; /* 回転の基準点 */
+  z-index: -1;
 }
 
 .heart::after {
@@ -50,6 +56,7 @@ p {
 	border-radius: 60px 100px 0 0; /* 丸み */
 	transform: rotate(45deg); /* 角度調整 */
 	transform-origin: 100% 100%; /* 回転の基準点 */
+  z-index: -1;
 }
 
 .page-item.active .page-link {

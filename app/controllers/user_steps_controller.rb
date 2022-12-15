@@ -15,23 +15,39 @@ class UserStepsController < ApplicationController
   end
 
   def third
-    session[:cleaning] = user_choice_params[:cleaning]
-    @user_choice = UserChoice.new
+    if session[:cleaning] || params[:user_choice][:cleaning]
+      session[:cleaning] = user_choice_params[:cleaning]
+      @user_choice = UserChoice.new
+    else
+      redirect_to second_user_steps_path
+    end
   end
 
   def fourth
-    session[:active] = user_choice_params[:active]
-    @user_choice= UserChoice.new
+    if session[:active] || params[:user_choice][:active]
+      session[:active] = user_choice_params[:active]
+      @user_choice= UserChoice.new
+  else
+    redirect_to third_user_steps_path
+  end
   end
 
   def fifth
-    session[:exercise] = user_choice_params[:exercise]
-    @user_choice = UserChoice.new
+    if session[:exercise] || params[:user_choice][:active]
+      session[:exercise] = user_choice_params[:exercise]
+      @user_choice = UserChoice.new
+  else
+    redirect_to fourth_user_steps_path
+  end
   end
 
   def sixth
-    session[:home] = user_choice_params[:home]
-    @user_choice = UserChoice.new
+    if session[:home] || params[:user_choice][:home]
+      session[:home] = user_choice_params[:home]
+      @user_choice = UserChoice.new
+    else
+      redirect_to fifth_user_steps_path
+    end
   end
 
   def create
