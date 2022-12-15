@@ -8,6 +8,7 @@
     <div class="searching">
       <%= f.label :size, t('.Size') %>
       <%= f.select :size_eq, Dog.sizes_i18n.invert, { include_blank: "指定なし" } %>
+      <%= f.select :size_eq, Dog.sizes.keys.map {|k| [t("enums.dog.size.#{k}"), k]} %>
     </div>
     <div class="searching">
       <%= f.check_box :cleaning_eq, {}, 1 , nil%>

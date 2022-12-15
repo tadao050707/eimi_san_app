@@ -6,8 +6,12 @@ class UserStepsController < ApplicationController
   end
 
   def second
-    session[:vehicle] = user_choice_params[:vehicle]
-    @user_choice = UserChoice.new
+    if session[:vehicle] || params[:user_choice][:vehicle]
+      session[:vehicle] = user_choice_params[:vehicle]
+      @user_choice = UserChoice.new
+    else
+      redirect_to first_user_steps_path
+    end
   end
 
   def third

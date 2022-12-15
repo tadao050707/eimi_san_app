@@ -33,7 +33,6 @@
 }
 
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -50,4 +49,9 @@
   .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
+  }
+
+  p.text-muted {
+    text-align: right;
+    z-index: 100;
   }
