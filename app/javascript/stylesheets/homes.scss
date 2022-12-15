@@ -1,4 +1,5 @@
 .main-container {
+  margin-top: 77px;
   background-image: url(/images/home.png);
   height: 800px;
   background-size: cover;
@@ -6,6 +7,23 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.text {
-  margin-left: 20px;
+div.text {
+  height: 100%;
+  padding-left: 20px;
+  line-height: 0.6
+}
+
+.title {
+  background: linear-gradient(transparent 70%, #80C0A0 70%);
+  font-size: 28px;
+  width: 820px;
+}
+
+p {
+  line-height: normal;
+}
+
+h5{
+  text-align: right;
+  padding-right: 20px;
 }

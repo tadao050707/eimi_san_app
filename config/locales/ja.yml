@@ -30,7 +30,6 @@ ja:
       house:
         owned: '持ち家'
         lent: '賃貸'
-  enums:
     user_choice:
       size:
         big: '大型犬'
