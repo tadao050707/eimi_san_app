@@ -76,4 +76,6 @@ gem 'enum_help'
 gem 'fog-aws'
 gem 'dotenv-rails'
 gem 'unicorn'
-
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
