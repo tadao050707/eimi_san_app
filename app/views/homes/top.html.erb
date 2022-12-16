@@ -1,29 +1,24 @@
 <body class="main-container">
   <div class="text">
-    <h5><%= t('.Page') %></h5>
+    <h5>トップページ</h5>
     <h3 class="title">これから家族にわんちゃんを迎え入れようとしているあなたに。</h3>
     <div><P>日本では、約200種ほどのわんちゃんを見かけることができます。</p></div>
     <div><p>80kgを超える大型犬から、2Kgほどの小型犬、<br>
-    また、体を動かすのが好きだったり、小さな子供とも仲良くできる犬種など</p></div>
-    <p>さまざまな種類に、さまざまな特徴があります。</p>
-    <h3>どんなわんちゃんを選びますか？</h3>
-    <p>現状では、ネグレクトや、飼育放棄されるわんちゃんがいるのが現実です。</p>
-    <p>こんなに大きくなるとは知らなかった。<br>
-    子供との相性が悪く、このまま飼い続けることはできない。</p>
-    <p>飼い主の生活スタイルや環境と犬の相性が悪い</p><h3>ミスマッチから起こる問題です。</h3>
+    また体を動かすのが好きだったり、小さな子供とも仲良くできる犬種など</p><div>
+    <h4>さて、どんなわんちゃんを選びますか？</h4><br><br>
+    <p>現状では、飼育放棄されるわんちゃんがいます。</p>
+    <p>飼い主の生活スタイルや環境と犬の相性が悪い</p><h4>ミスマッチから起こる問題です。</h4>
     <p>わんちゃんと10年15年とずっと素晴らしい日々を過ごすために、</p>
-    <p>どんなわんちゃんがあなたと相性が良いのか見てはいかがでしょうか。</p>
+    <p>どんなわんちゃんがあなたと相性が良いのか気になりますよね。</p>
     <h4>素晴らしい家族と出会うためのお手伝いに。</h4>
     <h2 class="conclusion">Wonderで相性診断ができます。</h2>
 
   <div class="link">
     <%= link_to t('.Sign In'),  new_user_registration_path %>
-    <%= link_to t('.Index'), dogs_path %>
-
-    <%= link_to t('.Guest login'), users_guest_sign_in_path, method: :post %>
-    <%= link_to t('.Admin guest login'), users_guest_admin_sign_in_path, method: :post %>
   </div>
+  <br>
+  <%= link_to t('.Guest login'), users_guest_sign_in_path, method: :post %>
+  <%= link_to t('.Admin guest login'), users_guest_admin_sign_in_path, method: :post %>
+  <%= link_to t('.Japanese'), locale_path(locale: "ja") %>
+  <%= link_to t('.English'), locale_path(locale: "en") %>
 </body>
-
-<%= link_to t('.Japanese'), locale_path(locale: "ja") %>
-<%= link_to t('.English'), locale_path(locale: "en") %>
