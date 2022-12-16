@@ -1,5 +1,10 @@
+<p id="notice"><%= notice %></p>
+
 <div class="sub-container">
   <div class="white-frame">
+    <% if current_user.present? && current_user.admin? %>
+      <%= link_to '管理者ログイン', rails_admin_path %>
+    <% end %>
     <h5>マイページ<h5>
     <div class="font-size">
       <p class="center-text">
