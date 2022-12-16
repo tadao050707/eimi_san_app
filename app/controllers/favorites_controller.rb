@@ -5,8 +5,9 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = current_user.favorites.find_by(dog_id: params[:id]).destroy
-    redirect_to dog_path(params[:id])
+    dog = Dog.find(Favorite.find(params[:id]).dog_id)
+    @favorite = current_user.favorites.find_by(id: params[:id]).destroy
+    redirect_to dog_path(dog)
   end
 end
 
