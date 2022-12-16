@@ -1,24 +1,24 @@
-<h2><%= t('.Log in') %></h2>
+  <h2><%=t('.Log in')%><h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+   <div class="form-group row">
+    <%= f.label :name, class: "col-sm-2 col-form-label" %><br />
+    <%= f.text_field :name, autofocus: true, placeholder: "名前", autocomplete: "name", class: 'form-control' %>
   </div>
   
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+   <div class="form-group row">
+    <%= f.label :email, class: "col-sm-2 col-form-label" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+   <div class="form-group row">
+    <%= f.label :password, class: "col-sm-2 col-form-label" %><br />
+    <%= f.password_field :password, placeholder: "パスワード", autocomplete: "current-password", class: 'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="col-sm-2 col-form-label">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>

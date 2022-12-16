@@ -1,4 +1,5 @@
 <%= form_with model: @user_choice, url: sixth_user_steps_path, method: :get do |form| %>
+  <h6 class="which_one">当てはまる方を選んでください</h6>
   <p class="enum-choice"><%=t('.About family')%></p>
 
   <div class="enum-choice">
@@ -16,9 +17,9 @@
   </div>
 
   <div class="tip">
-    <p>さまざまな毛色のわんちゃんがたくさん。</p>
-    <p>毛が抜けやすい犬種や、毛が抜けにくい犬種がいます。</p>
-    <p>部屋中毛だらけなんてことも。</p>
-    <p>日頃のお掃除や、犬アレルギーについても考えてみましょう。</p>
+    <p>わんちゃんとこどもが遊んでいると可愛らしいですね。</p>
+    <p>わんちゃんとお子さんが仲良く遊べたら素敵です。</p>
+    <p>しかし、犬種や性格によっては子どもが苦手なわんちゃんもいます。</p>
+    <p>子どもと相性の良い犬種、思いつく犬種はありますか？</p>
   <div>
 <% end %>

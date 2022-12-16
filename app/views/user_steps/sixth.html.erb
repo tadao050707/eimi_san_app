@@ -1,4 +1,5 @@
  <%= form_with model: @user_choice, url: user_steps_path, method: :post do |form| %>
+  <h6 class="which_one">当てはまる方を選んでください</h6>
   <p class="enum-choice"><%= t('.About house')%></p>
 
   <div class="enum-choice">
@@ -16,9 +17,9 @@
   </div>
 
   <div class="tip">
-    <p>さまざまな毛色のわんちゃんがたくさん。</p>
-    <p>毛が抜けやすい犬種や、毛が抜けにくい犬種がいます。</p>
-    <p>部屋中毛だらけなんてことも。</p>
-    <p>日頃のお掃除や、犬アレルギーについても考えてみましょう。</p>
+    <p>お家に帰ったら、わんちゃんが待っている暮らし、素敵ですよね。</p>
+    <p>賃貸で、ペット可の物件が少なかったり、</p>
+    <p>小型犬のみとサイズが指定されていることが多いです。</p>
+    <p>飼いたい犬種の成犬時のサイズの確認は大切ですね。</p>
   <div>
 <% end %>
