@@ -14,7 +14,7 @@
   <body>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-          <%= link_to image_tag('logo.png', width: 200), "/" %>
+          <%= link_to image_tag('logo.png', width: 180), "/" %>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-md-auto align-items-center">
               <li>
@@ -24,7 +24,7 @@
                 <%= link_to image_tag('login.png', width: 30), new_user_session_path %>
               </li>
               <li>
-                <%= link_to image_tag('logout.png', width: 40), destroy_user_session_path %>
+                <%= link_to image_tag('logout.png', width: 40, alt: 'Logout'),   destroy_user_session_path %>
               </li>
             </ul>
           </div>
