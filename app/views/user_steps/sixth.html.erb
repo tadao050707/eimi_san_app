@@ -9,9 +9,16 @@
   </div>
   
   <div class="actions">
-    <%= form.submit class: "button004"%>
+    <%= form.submit "次へ", class: "button004"%>
   </div>
-  <div>
+  <div class="step_back">
     <%= link_to 'Back', fifth_user_steps_path %>
   </div>
+
+  <div class="tip">
+    <p>さまざまな毛色のわんちゃんがたくさん。</p>
+    <p>毛が抜けやすい犬種や、毛が抜けにくい犬種がいます。</p>
+    <p>部屋中毛だらけなんてことも。</p>
+    <p>日頃のお掃除や、犬アレルギーについても考えてみましょう。</p>
+  <div>
 <% end %>
