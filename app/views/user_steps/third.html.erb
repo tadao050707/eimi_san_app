@@ -9,19 +9,21 @@
   </div>
   
   <div class="actions">
-    <%= form.submit class: "button004" %>
+    <%= form.submit "次へ", class: "button004" %>
   </div>
 
 
-  <div>
+  <div class="step_back">
     <%= link_to 'Back', second_user_steps_path %>
   </div>
 
-  <div>
-    <p>牧羊犬や牧畜犬、猟犬をご存知ですか？</p>
-    <p></p>
-    <p></p>
-    <p>ぜひ調べてみてください</p>
+  <div class="tip">
+    <p>牧羊犬をご存知ですか？</p>
+    <p>放牧されている羊をまとめ牧舎に連れ戻したり、迷ったヒツジを群れに連れ戻すことを行い、</p>
+    <p>体力があり、頭を使うのが得意です。</p>
+    <p>他にも牧畜犬や猟犬などもいます。</p>
+    <p>ドッグスポーツで活躍している子がたくさんいるので、
+ドッグスポーツについて調べてはいかがでしょうか。</p>
   </div>
 
 <% end %>

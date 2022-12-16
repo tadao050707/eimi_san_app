@@ -33,7 +33,7 @@ class UserStepsController < ApplicationController
   end
 
   def fifth
-    if session[:exercise] || params[:user_choice][:active]
+    if session[:exercise] || params[:user_choice][:exercise]
       session[:exercise] = user_choice_params[:exercise]
       @user_choice = UserChoice.new
     else

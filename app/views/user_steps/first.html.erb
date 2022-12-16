@@ -1,24 +1,24 @@
 <%= form_with model: @user_choice, url: second_user_steps_path, method: :get do |form| %>
-  <h5>当てはまる方を選んでください</h5>
-  <h2 class="enum-choice"><%= t('.What do you ride?')%></h2>
+  <h6 class="which_one">当てはまる方を選んでください</h6>
+  <p class="enum-choice"><%= t('.What do you ride?')%></p>
 
   <div class="enum-choice">
     <%= form.radio_button(:vehicle, :car, class: "radio-inline__input" )%>
-    <%= form.label(:vehicle, "car", value: "car", class: "radio-inline__label") %>
+    <%= form.label(:vehicle, t('.car'), value: "car", class: "radio-inline__label") %>
     <%= form.radio_button(:vehicle, :train, class: "radio-inline__input" )%>
-    <%= form.label(:vehicle, "train", value: "train", class: "radio-inline__label") %>
+    <%= form.label(:vehicle, t('.train'), value: "train", class: "radio-inline__label") %>
   </div>
 
 
   <div class="actions">
-    <%= form.submit "Next", class: "button004" %>
+    <%= form.submit "次へ", class: "button004" %>
   </div>
 
-  <div class="button02">
+  <div class="step_back">
     <%= link_to 'Back', user_path(current_user) %>
   </div>
 
-  <div>
+  <div class="tip">
     <p>わんちゃんとお出かけしたいところはありますか？</p>
     <p>電車や新幹線でも一緒にお出かけができます。</p>
     <p>キャリーの規定サイズやルールは会社により異なります。</p>

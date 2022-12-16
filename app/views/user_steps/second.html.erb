@@ -1,5 +1,5 @@
  <%= form_with model: @user_choice, url: third_user_steps_path, method: :get do |form| %>
-  <h2 class="enum-choice"><%= t('.Do you like cleaning up?') %></h2>
+  <p class="enum-choice"><%= t('.Do you like cleaning up?') %></p>
   
   <div class="enum-choice">
     <%= form.radio_button :cleaning, :like, class: "radio-inline__input"%>
@@ -9,13 +9,13 @@
   </div>
   
   <div class="actions">
-    <%= form.submit "Next", class: "button004"%>
+    <%= form.submit "次へ", class: "button004"%>
   </div>
-  <div>
+  <div class="step_back">
     <%= link_to 'Back', first_user_steps_path %>
   </div>
 
-  <div>
+  <div class="tip">
     <p>さまざまな毛色のわんちゃんがたくさん。</p>
     <p>毛が抜けやすい犬種や、毛が抜けにくい犬種がいます。</p>
     <p>部屋中毛だらけなんてことも。</p>
