@@ -4,25 +4,25 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="form-group row">
-    <%= f.label :name, class: "col-sm-2 col-form-label" %><br />
+    <%= f.label :name, class: "col-md-4 col-form-label" %><br />
     <%= f.text_field :name, autofocus: true, placeholder: true, autocomplete: "name", class: 'form-control' %>
   </div>
   
   <div class="form-group row">
-    <%= f.label :email, class: "col-sm-2 col-form-label" %><br />
+    <%= f.label :email, class: "col-md-4 col-form-label" %><br />
     <%= f.email_field :email, autofocus: true, placeholder: true, autocomplete: "email", class: 'form-control' %>
   </div>
 
   <div class="form-group row">
-    <%= f.label :password, class: "col-sm-2 col-form-label" %>
+    <%= f.label :password, class: "col-md-4 col-form-label" %>
     <% if @minimum_password_length %>
     <% end %><br />
     <%= f.text_field :password, placeholder: true, autocomplete: "new-password", class: 'form-control' %>
-    <em>(<%= @minimum_password_length %> t('.characters minimum'))</em>
+    <br><div><%= @minimum_password_length %> <%= t('.characters minimum') %></div>
   </div>
 
   <div class="form-group row">
-    <%= f.label :password_confirmation, class: "col-sm-2 col-form-label" %><br />
+    <%= f.label :password_confirmation, class: "col-md-4 col-form-label" %><br />
     <%= f.text_field :password_confirmation, placeholder: true, autocomplete: "new-password", class: 'form-control'%>
   </div>
 

@@ -1,18 +1,18 @@
   <h2><%=t('.Log in')%><h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  
-   <div class="form-group row">
+
+  <div class="form-group row">
     <%= f.label :name, class: "col-sm-4 col-form-label" %><br />
     <%= f.text_field :name, autofocus: true, placeholder: "名前", autocomplete: "name", class: 'form-control' %>
   </div>
   
-   <div class="form-group row">
+  <div class="form-group row">
     <%= f.label :email, class: "col-sm-4 col-form-label" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: 'form-control' %>
   </div>
 
-   <div class="form-group row">
+  <div class="form-group row">
     <%= f.label :password, class: "col-sm-4 col-form-label" %><br />
     <%= f.password_field :password, placeholder: "パスワード", autocomplete: "current-password", class: 'form-control' %>
   </div>
