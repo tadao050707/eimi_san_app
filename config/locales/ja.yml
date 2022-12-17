@@ -53,3 +53,7 @@ ja:
       house:
         owned: '持ち家'
         lent: '賃貸'
+  helpers:
+    placeholder:
+      message:
+        name: "名前"
