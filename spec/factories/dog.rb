@@ -9,11 +9,12 @@ FactoryBot.define do
     exercise {0}
     home {0}
     house {0}
+    image_url { "https://cdn2.thedogapi.com/images/HkNS3gqEm.jpg" }
   end
 
   factory :second_dog do
     id{2}
-    name { "dog000000" }
+    name { "dog111111" }
     size {2}
     vehicle {1}
     cleaning {1}
@@ -21,5 +22,6 @@ FactoryBot.define do
     exercise {1}
     home {1}
     house {1}
+    image_url { "https://cdn2.thedogapi.com/images/B12BnxcVQ.jpg" }
   end
 end
