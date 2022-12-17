@@ -17,15 +17,33 @@
           <%= link_to image_tag('logo.png', width: 180), "/" %>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-md-auto align-items-center">
-              <li>
-                <%= link_to image_tag('search.png', width: 30), search_dogs_path %>
-              </li>
-              <li>
-                <%= link_to image_tag('login.png', width: 30), new_user_session_path %>
-              </li>
-              <li>
-                <%= link_to image_tag('logout.png', width: 40, alt: 'Logout'),   destroy_user_session_path %>
-              </li>
+              <%if user_signed_in?%>
+                <li>
+                  <%= link_to search_dogs_path do %>
+                    <%= image_tag('search.png', width: 30) %>
+                    <p class="logo-text">検索</p>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to new_user_session_path do %>
+                    <%= image_tag('login.png', width: 30) %>
+                    <p class="logo-text">マイページ</p>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path do %>
+                    <%= image_tag('logout.png', width: 30, alt: 'Logout') %>
+                    <p class="logo-text">ログアウト</p>
+                  <% end %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to new_user_session_path do %>
+                    <%= image_tag('login.png', width: 30) %>
+                    <p class="logo-text">ログイン</p>
+                  <% end %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>

@@ -55,8 +55,20 @@
   p.text-muted {
     text-align: right;
     z-index: 100;
+    font-size: 20px;
   }
 
   .outline {
     position: relative;
+    font-size: 20px;
   }
+
+  .logo-text {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 0%;
+  }
+
+  .text-primary {
+    color: #275a48 !important;
+}
