@@ -12,6 +12,7 @@ ja:
   user_steps:
     first:
       What do you ride?: ふだんよく乗るのは？
+      Back: 戻る
     second:
       Do you like cleaning up?: こまめなお掃除が？
     third:

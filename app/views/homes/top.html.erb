@@ -16,8 +16,10 @@
     <%= link_to t('.Sign In'),  new_user_registration_path %>
   </div>
   <br>
-  <%= link_to t('.Guest login'), users_guest_sign_in_path, method: :post %>
-  <%= link_to t('.Admin guest login'), users_guest_admin_sign_in_path, method: :post %>
-  <%= link_to t('.Japanese'), locale_path(locale: "ja") %>
-  <%= link_to t('.English'), locale_path(locale: "en") %>
+  <% unless user_signed_in? %>
+    <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %>
+    <%= link_to '管理者ログイン', users_guest_admin_sign_in_path, method: :post %>
+  <% end %>
+  <%# <%= link_to t('.Japanese'), locale_path(locale: "ja") %>
+  <%# <%= link_to t('.English'), locale_path(locale: "en") %>
 </body>
